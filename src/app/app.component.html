@@ -1,0 +1,62 @@
+<div class="row">
+  <div
+    style="
+  height: 150px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e9a0a0;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f2f9ff;
+"
+  >
+    <div *ngFor="let item of calendar; index as i">
+      <label
+        style="    font-size: 14px;
+    margin-right: 10px;
+    font-weight: 500;"
+        >{{ item.name }}</label
+      >
+      <input
+        (ngModelChange)="item.changeEvent($event, item, i)"
+        bsDaterangepicker
+        [(ngModel)]="item.bsRangeValue"
+        type="text"
+        [bsConfig]="item.bsConfig"
+      />
+    </div>
+    <!-- <input 
+  [(ngModel)]="bsRangeValue" (ngModelChange)="onValueChange($event)" 
+   type="text" placeholder="1 Daterangepicker" class="form-control" bsDaterangepicker [bsConfig]="bsConfig">
+  <input [(ngModel)]="bsRangeValue1" (ngModelChange)="onValueChange1($event)"  type="text" 
+   placeholder="2 Daterangepicker" class="form-control" bsDaterangepicker [bsConfig]="bsConfig"> -->
+    <div
+      style="    display: flex;
+  flex-direction: unset;
+  width: 100%;
+  justify-content: space-between;"
+    >
+      <div style="text-align: center">
+        <button class="btn btn-success" (click)="setOptions()" type="button">
+          Last 250 Days
+        </button>
+      </div>
+      <div style="text-align: center">
+        <button class="btn btn-success" (click)="openCDate()" type="button">
+          Show C Date
+        </button>
+      </div>
+      <div style="text-align: center">
+        <button class="btn btn-success" (click)="openRDate()" type="button">
+          Show R Date
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
