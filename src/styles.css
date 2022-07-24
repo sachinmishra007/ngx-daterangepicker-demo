@@ -1,1 +1,37 @@
 /* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+.bs-datepicker-body table td span.disabled,
+.bs-datepicker-body table td.disabled span {
+    text-decoration: line-through;
+}
+
+.bs-datepicker-body table td.week span {
+    color: #2dfbcd !important;
+}
+
+.bs-datepicker-body table td span.selected,
+.bs-datepicker-head,
+.bs-datepicker-head,
+.bs-datepicker button:active,
+.bs-datepicker-body table td.selected span,
+.bs-datepicker-body table td span[class*="select-"]:after,
+.bs-datepicker-body table td[class*="select-"] span:after,
+.bs-datepicker-body table td.active-week span:hover {
+    background-color: #0e3658 !important;
+}
+.bs-datepicker-body span{
+    color:#1f1b1b;
+}
+.bs-datepicker-predefined-btns {
+    button {
+        background-color: #0e3658 !important;
+        text-align: center;
+
+    }
+
+    button:hover {
+        color: white;
+        // background-color: #0e3658 !important;
+    }
+
+}
